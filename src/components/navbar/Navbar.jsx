@@ -4,12 +4,20 @@ import SearchIcon from '@mui/icons-material/Search'
 import VideoCameraBackIcon from '@mui/icons-material/VideoCameraBack'
 import NotificationNoneIcon from '@mui/icons-material/NotificationsNone'
 import {logo} from '../../utils/constants'
+import { useState } from 'react'
 const Navbar = () => {
+ const [showSideBar, setShowSideBar] = useState(false)
+
+ const setSideBar = ()=>{
+  setShowSideBar((prev)=>!prev)
+  console.log(showSideBar)
+ }
+
   return (
     <div className={classes.container}>
       <div  className={classes.wrapper}>
       <div className={classes.leftSide}>
-        <MenuIcon className={classes.menuIcon}/>
+        <MenuIcon onClick={setSideBar} className={classes.menuIcon}/>
         <img src={logo}  />
       </div>
       <div className={classes.centerSide}>
@@ -20,7 +28,7 @@ const Navbar = () => {
       <VideoCameraBackIcon/>
       <NotificationNoneIcon/>
       <div className={classes.profileCircle}>
-      <span></span>
+      <span>W</span>
       </div>
       </div>
       </div>
