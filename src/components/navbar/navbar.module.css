@@ -1,0 +1,32 @@
+.container {
+ padding: 1rem;
+ height: 70px;
+ width: 100%;
+}
+.wrapper {
+ height: 100%;
+ width: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+}
+/* left Side  */
+.leftSide {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.leftSide > img {
+    width: 40px;
+    height: 40px;
+}
+.menuIcon {
+    font-size: 30px;
+    cursor: pointer;
+}
+.centerSide {
+
+}
+.rightSide {
+    
+}
